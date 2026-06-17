@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const card = document.querySelector(".card");
+  const flipBtn = document.querySelector(".flip-btn");
   const form = document.getElementById("weddingForm");
   const namesEl = document.querySelector(".names");
   const dateEl = document.querySelector(".date");
   const locationEl = document.querySelector(".location");
+
+  flipBtn.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -12,9 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const date = document.getElementById("date").value;
     const location = document.getElementById("locationInput").value;
 
-    // Cập nhật nội dung thiệp
     namesEl.textContent = `${groom} ❤ ${bride}`;
     dateEl.textContent = `Ngày cưới: ${date}`;
     locationEl.textContent = `Địa điểm: ${location}`;
+
+    // Lật lại mặt trước để xem kết quả
+    card.classList.remove("flipped");
   });
 });
