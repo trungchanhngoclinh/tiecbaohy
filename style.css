@@ -1,109 +1,89 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ffcccc, #ffe6e6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.background {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('https://i.imgur.com/4NJlQ.png') repeat;
-  opacity: 0.2;
-  z-index: -1;
-}
-
-.card {
-  width: 350px;
-  height: 500px;
-  perspective: 1000px;
-}
-
-.card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
-
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  background: white;
-  padding: 20px;
+  background: #fff0f0;
+  overflow: hidden;
   text-align: center;
 }
 
-.card-front {
-  animation: fadeIn 1.5s ease;
+.card {
+  width: 700px;
+  height: 400px;
+  margin: 50px auto;
+  position: relative;
+  perspective: 1500px;
 }
 
-.card-back {
-  transform: rotateY(180deg);
-  background: #fff0f0;
+.card-left, .card-right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #fff;
+  border: 3px solid #c00;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform-origin: left center;
 }
 
-.chibi-frame img {
-  width: 100%;
-  border-radius: 12px;
-  transition: transform 0.5s ease;
+.card-right {
+  left: 50%;
+  transform-origin: right center;
 }
 
-.chibi-frame:hover img {
-  transform: scale(1.05);
+.front {
+  padding: 30px;
 }
 
-.names {
-  font-size: 1.6em;
-  font-weight: bold;
-  color: #d32f2f;
-  margin: 15px 0;
-  animation: pulse 2s infinite;
+.front h1 {
+  color: #c00;
+  font-size: 2em;
 }
 
-.date, .location {
+.date {
+  font-style: italic;
   color: #555;
-  margin-bottom: 10px;
 }
 
-.flip-btn {
+.inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 3px solid #c00;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.inside h2 {
+  color: #c00;
+}
+
+.chibi {
   margin-top: 20px;
-  background: #d32f2f;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  width: 150px;
 }
 
-.flip-btn:hover {
-  background: #b71c1c;
-  transform: scale(1.1);
+/* Hoa rơi */
+.flower {
+  position: fixed;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background: pink;
+  border-radius: 50%;
+  animation: fall linear forwards;
 }
 
-/* Hiệu ứng */
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.05);}
-  100% {transform: scale(1);}
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
 }
