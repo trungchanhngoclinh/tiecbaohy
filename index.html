@@ -1,78 +1,325 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Trung Chánh ❤️ Ngọc Linh</title>
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
 
-<div class="falling-hearts"></div>
+    <!-- LOADING -->
 
-<section class="hero">
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h1>Trung Chánh</h1>
-        <span>&</span>
-        <h1>Ngọc Linh</h1>
-
-        <p class="date">07.12.2026</p>
-
-        <div id="countdown"></div>
+    <div id="loader">
+        <div class="heart-loader">❤</div>
     </div>
-</section>
 
-<section class="story">
-    <h2>Chuyện Tình Yêu</h2>
+    <!-- MUSIC -->
 
-    <div class="timeline">
-        <div class="item">
-            <h3>Lần đầu gặp nhau</h3>
-            <p>Viết nội dung của bạn ở đây...</p>
+    <audio id="bgMusic" loop>
+        <source src="music/wedding.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn">
+        <i class="fa-solid fa-music"></i>
+    </button>
+
+    <!-- OPEN CARD -->
+
+    <section id="intro">
+
+        <div class="intro-overlay"></div>
+
+        <div class="intro-content">
+
+            <span class="small-title">
+                SAVE THE DATE
+            </span>
+
+            <h1>
+                Trung Chánh
+            </h1>
+
+            <div class="heart">
+                ❤
+            </div>
+
+            <h1>
+                Ngọc Linh
+            </h1>
+
+            <p class="date">
+                05.07.2026
+            </p>
+
+            <button id="openInvitation">
+                MỞ THIỆP
+            </button>
+
         </div>
 
-        <div class="item">
-            <h3>Ngày yêu nhau</h3>
-            <p>Viết nội dung của bạn ở đây...</p>
-        </div>
+    </section>
 
-        <div class="item">
-            <h3>Ngày cầu hôn</h3>
-            <p>Viết nội dung của bạn ở đây...</p>
-        </div>
+    <!-- MAIN -->
+
+    <main id="mainContent">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <h2>Wedding Invitation</h2>
+
+                <h1>
+                    Trung Chánh
+                    <span>&</span>
+                    Ngọc Linh
+                </h1>
+
+                <p>
+                    Chúng tôi sắp về chung một nhà
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- COUNTDOWN -->
+
+        <section class="countdown-section">
+
+            <div class="container">
+
+                <h2>Đếm Ngược Ngày Cưới</h2>
+
+                <div id="countdown">
+
+                    <div class="time-box">
+                        <span id="days">0</span>
+                        <small>Ngày</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="hours">0</span>
+                        <small>Giờ</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="minutes">0</span>
+                        <small>Phút</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="seconds">0</span>
+                        <small>Giây</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STORY -->
+
+        <section class="story-section">
+
+            <div class="container">
+
+                <h2>Chuyện Tình Yêu</h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="content">
+                            <h3>Lần đầu gặp nhau</h3>
+                            <p>
+                                Một cuộc gặp gỡ tình cờ,
+                                mở đầu cho hành trình yêu thương.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="content">
+                            <h3>Ngày yêu nhau</h3>
+                            <p>
+                                Chúng mình chọn đồng hành
+                                cùng nhau trên chặng đường dài.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="content">
+                            <h3>Lời cầu hôn</h3>
+                            <p>
+                                Khoảnh khắc hạnh phúc nhất,
+                                khi cả hai quyết định về chung một nhà.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GALLERY -->
+
+        <section class="gallery-section">
+
+            <div class="container">
+
+                <h2>Album Ảnh</h2>
+
+                <div class="gallery-grid">
+
+                    <img src="images/cover.jpg" alt="">
+                    <img src="images/bg1.jpg" alt="">
+                    <img src="images/bg2.jpg" alt="">
+                    <img src="images/bg3.jpg" alt="">
+                    <img src="images/cover.jpg" alt="">
+                    <img src="images/bg1.jpg" alt="">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- EVENT -->
+
+        <section class="event-section">
+
+            <div class="container">
+
+                <h2>Thông Tin Tiệc Cưới</h2>
+
+                <div class="event-card">
+
+                    <i class="fa-solid fa-champagne-glasses"></i>
+
+                    <h3>Lễ Thành Hôn</h3>
+
+                    <p>
+                        Chủ Nhật
+                    </p>
+
+                    <p>
+                        05 Tháng 07, 2026
+                    </p>
+
+                    <p>
+                        Nhà Hàng BELLA RIVA
+                    </p>
+
+                    <p>
+                        55 An Phú, An Khánh, TP.HCM
+                    </p>
+
+                    <a
+                        target="_blank"
+                        href="https://maps.google.com/?q=Bella+Riva+55+An+Phu+TPHCM">
+                        Xem Bản Đồ
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- RSVP -->
+
+        <section class="rsvp-section">
+
+            <div class="container">
+
+                <h2>Xác Nhận Tham Dự</h2>
+
+                <form id="rsvpForm">
+
+                    <input
+                        type="text"
+                        placeholder="Họ và tên"
+                        required>
+
+                    <input
+                        type="number"
+                        placeholder="Số lượng khách"
+                        required>
+
+                    <textarea
+                        placeholder="Lời nhắn"></textarea>
+
+                    <button type="submit">
+                        Gửi Xác Nhận
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- THANK YOU -->
+
+        <section class="thankyou">
+
+            <div class="container">
+
+                <h2>
+                    Cảm Ơn Vì Đã Đồng Hành
+                </h2>
+
+                <p>
+                    Sự hiện diện của bạn là niềm vui
+                    và hạnh phúc của chúng tôi.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX -->
+
+    <div id="lightbox">
+
+        <span id="closeLightbox">
+            ×
+        </span>
+
+        <img id="lightboxImg">
+
     </div>
-</section>
 
-<section class="gallery">
-    <h2>Album Ảnh</h2>
+    <!-- FLOWERS -->
 
-    <div class="grid">
-        <img src="images/gallery1.jpg">
-        <img src="images/gallery2.jpg">
-        <img src="images/gallery3.jpg">
-        <img src="images/gallery4.jpg">
-    </div>
-</section>
+    <div id="flowers"></div>
 
-<section class="event">
-    <h2>Thông Tin Lễ Cưới</h2>
+    <script src="js/script.js"></script>
 
-    <div class="card">
-        <h3>Lễ Thành Hôn</h3>
-        <p>08:00 - 07/12/2026</p>
-        <p>Địa chỉ của bạn</p>
-    </div>
-</section>
-
-<section class="footer">
-    <h2>Rất hân hạnh được đón tiếp</h2>
-</section>
-
-<script src="js/script.js"></script>
 </body>
+
 </html>
+```
