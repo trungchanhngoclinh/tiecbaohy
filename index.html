@@ -7,19 +7,42 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Bên ngoài: khung thiệp -->
   <div class="card">
     <div class="card-header">
       <h1>Thiệp Cưới Chibi</h1>
     </div>
     <div class="card-body">
       <img src="https://via.placeholder.com/300x400.png?text=Chibi+Couple" alt="Chibi Couple">
-      <p class="names">Minh & Hoa</p>
-      <p class="date">17/06/2026</p>
+      <p class="names">Tên cô dâu & chú rể</p>
+      <p class="date">Ngày cưới</p>
+      <p class="location">Địa điểm</p>
     </div>
     <div class="card-footer">
       <button onclick="alert('Chúc mừng hạnh phúc!')">Gửi lời chúc</button>
     </div>
   </div>
+
+  <!-- Bên trong: form nhập dữ liệu -->
+  <div class="form-section">
+    <h2>Nhập thông tin thiệp</h2>
+    <form id="weddingForm">
+      <label>Tên cô dâu:</label>
+      <input type="text" id="bride" placeholder="Nhập tên cô dâu" required>
+
+      <label>Tên chú rể:</label>
+      <input type="text" id="groom" placeholder="Nhập tên chú rể" required>
+
+      <label>Ngày cưới:</label>
+      <input type="date" id="date" required>
+
+      <label>Địa điểm:</label>
+      <input type="text" id="locationInput" placeholder="Nhập địa điểm" required>
+
+      <button type="submit">Tạo thiệp</button>
+    </form>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
