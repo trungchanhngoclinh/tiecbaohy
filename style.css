@@ -1,89 +1,110 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff0f0;
-  overflow: hidden;
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.card {
-  width: 700px;
-  height: 400px;
-  margin: 50px auto;
-  position: relative;
-  perspective: 1500px;
+body{
+    font-family:'Poppins',sans-serif;
+    color:#444;
 }
 
-.card-left, .card-right {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: #fff;
-  border: 3px solid #c00;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 1s;
-  transform-origin: left center;
+.hero{
+    height:100vh;
+    background:url('../images/cover.jpg') center center/cover;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.card-right {
-  left: 50%;
-  transform-origin: right center;
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
 }
 
-.front {
-  padding: 30px;
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    color:white;
 }
 
-.front h1 {
-  color: #c00;
-  font-size: 2em;
+.hero h1{
+    font-family:'Imperial Script',cursive;
+    font-size:90px;
 }
 
-.date {
-  font-style: italic;
-  color: #555;
+.hero span{
+    font-size:50px;
 }
 
-.inside {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  border: 3px solid #c00;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 30px;
-  opacity: 0;
-  transition: opacity 1s;
+.date{
+    margin-top:15px;
+    font-size:22px;
 }
 
-.inside h2 {
-  color: #c00;
+#countdown{
+    margin-top:30px;
+    font-size:24px;
 }
 
-.chibi {
-  margin-top: 20px;
-  width: 150px;
+section{
+    padding:80px 20px;
 }
 
-/* Hoa rơi */
-.flower {
-  position: fixed;
-  top: -50px;
-  width: 30px;
-  height: 30px;
-  background: pink;
-  border-radius: 50%;
-  animation: fall linear forwards;
+h2{
+    text-align:center;
+    margin-bottom:40px;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.item{
+    background:#fff6f7;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:16px;
+}
+
+.gallery .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+}
+
+.event .card{
+    max-width:500px;
+    margin:auto;
+    background:#fff6f7;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.footer{
+    background:#f9d6dd;
+    text-align:center;
+}
+
+.heart{
+    position:fixed;
+    top:-50px;
+    color:#ff5c8a;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+    }
 }
