@@ -3,45 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thiệp Chibi Đỏ Demo</title>
+  <title>Thiệp Chibi Đỏ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Bên ngoài: khung thiệp -->
+  <!-- Nền trang -->
+  <div class="background"></div>
+
+  <!-- Khung thiệp -->
   <div class="card">
-    <div class="card-header">
-      <h1>Thiệp Cưới Chibi</h1>
-    </div>
-    <div class="card-body">
-      <img src="https://via.placeholder.com/300x400.png?text=Chibi+Couple" alt="Chibi Couple">
-      <p class="names">Tên cô dâu & chú rể</p>
-      <p class="date">Ngày cưới</p>
-      <p class="location">Địa điểm</p>
-    </div>
-    <div class="card-footer">
-      <button onclick="alert('Chúc mừng hạnh phúc!')">Gửi lời chúc</button>
+    <div class="card-inner">
+      <!-- Mặt trước -->
+      <div class="card-front">
+        <div class="chibi-frame">
+          <img src="https://via.placeholder.com/300x400.png?text=Chibi+Couple" alt="Chibi Couple">
+        </div>
+        <h1 class="names">Tên cô dâu & chú rể</h1>
+        <p class="date">Ngày cưới</p>
+        <p class="location">Địa điểm</p>
+      </div>
+
+      <!-- Mặt trong -->
+      <div class="card-back">
+        <h2>Nhập thông tin thiệp</h2>
+        <form id="weddingForm">
+          <label>Tên cô dâu:</label>
+          <input type="text" id="bride" required>
+          <label>Tên chú rể:</label>
+          <input type="text" id="groom" required>
+          <label>Ngày cưới:</label>
+          <input type="date" id="date" required>
+          <label>Địa điểm:</label>
+          <input type="text" id="locationInput" required>
+          <button type="submit">✨ Tạo thiệp</button>
+        </form>
+      </div>
     </div>
   </div>
 
-  <!-- Bên trong: form nhập dữ liệu -->
-  <div class="form-section">
-    <h2>Nhập thông tin thiệp</h2>
-    <form id="weddingForm">
-      <label>Tên cô dâu:</label>
-      <input type="text" id="bride" placeholder="Nhập tên cô dâu" required>
-
-      <label>Tên chú rể:</label>
-      <input type="text" id="groom" placeholder="Nhập tên chú rể" required>
-
-      <label>Ngày cưới:</label>
-      <input type="date" id="date" required>
-
-      <label>Địa điểm:</label>
-      <input type="text" id="locationInput" placeholder="Nhập địa điểm" required>
-
-      <button type="submit">Tạo thiệp</button>
-    </form>
-  </div>
+  <button class="flip-btn">Lật thiệp</button>
 
   <script src="script.js"></script>
 </body>
