@@ -2,46 +2,36 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thiệp Chibi Đỏ</title>
+  <title>Tiệc báo hỷ
+    Trung Chánh & Ngọc Linh</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Nền trang -->
-  <div class="background"></div>
+  <!-- Nhạc nền -->
+  <audio id="bg-music" src="music.mp3" autoplay loop></audio>
 
-  <!-- Khung thiệp -->
-  <div class="card">
-    <div class="card-inner">
-      <!-- Mặt trước -->
-      <div class="card-front">
-        <div class="chibi-frame">
-          <img src="https://via.placeholder.com/300x400.png?text=Chibi+Couple" alt="Chibi Couple">
-        </div>
-        <h1 class="names">Tên cô dâu & chú rể</h1>
-        <p class="date">Ngày cưới</p>
-        <p class="location">Địa điểm</p>
-      </div>
-
-      <!-- Mặt trong -->
-      <div class="card-back">
-        <h2>Nhập thông tin thiệp</h2>
-        <form id="weddingForm">
-          <label>Tên cô dâu:</label>
-          <input type="text" id="bride" required>
-          <label>Tên chú rể:</label>
-          <input type="text" id="groom" required>
-          <label>Ngày cưới:</label>
-          <input type="date" id="date" required>
-          <label>Địa điểm:</label>
-          <input type="text" id="locationInput" required>
-          <button type="submit">✨ Tạo thiệp</button>
-        </form>
+  <!-- Thiệp cưới -->
+  <div class="card" id="weddingCard">
+    <div class="card-left">
+      <div class="front">
+        <h1>Ngọc Ánh</h1>
+        <p class="date">24/05/2026</p>
       </div>
     </div>
+    <div class="card-right">
+      <div class="front">
+        <h1>Thế Bảo</h1>
+        <p class="date">24/05/2026</p>
+      </div>
+    </div>
+    <div class="inside">
+      <h2>Lời mời</h2>
+      <p>Trân trọng kính mời em Huy đến dự lễ cưới cùng gia đình chúng tôi.</p>
+      <p>誠邀您參加我們的婚禮</p>
+      <p>私たちの結婚式にご参加ください</p>
+      <img src="images/chibi.png" alt="Chibi Couple" class="chibi">
+    </div>
   </div>
-
-  <button class="flip-btn">Lật thiệp</button>
 
   <script src="script.js"></script>
 </body>
